@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        count = 0
+
+        class UberRide
+        { 
+            constructor(dist,rate,disc)
+            {
+                if(dist==undefined)
+                    this.dist = 0.0
+                else
+                    this.dist = dist
+
+                if(rate==undefined)
+                    this.rate = 3.34
+                else
+                    this.rate = rate
+
+                if(disc==undefined)
+                    this.disc = 25.0
+                else
+                    this.disc = disc
+
+                count++    
+            }
+
+            finalAmount()
+            {
+                var cost = (this.rate)*(this.dist)
+                var DSC  = cost*(this.disc/100.0)
+                var amnt = cost - DSC
+                
+                console.log(`Uber Ride: ${count}\n`,`Rate: ${this.rate.toFixed(2)} ₹/km Distance: ${this.dist.toFixed(2)}\n`,`Cost: ${cost.toFixed(2)} Discount: ${DSC.toFixed(2)}\n`,`Net Payable: ${amnt.toFixed(2)}`)
+            }
+        }
+
+        let ride1=new UberRide(30)
+        let ride2=new UberRide(12)
+        ride1.finalAmount()
+        ride2.finalAmount()
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person
+        {
+            constructor(name,age,gender)
+            {
+                if(name==undefined)
+                    this.name="Unknown"
+                else 
+                    this.name=name
+
+                if(age==undefined)
+                    this.age=0
+                else 
+                    this.age=age
+
+                if(gender==undefined)
+                    this.gender="Unknown"
+                else 
+                    this.gender=gender
+            }
+
+            toString()
+            {
+                return "Name: "+(this.name)+"\n"+"Age: "+(this.age)+" Gender: "+(this.gender)
+            }
+        }
+
+        let user1 = new Person("Einstein",85,"Male")
+        let user2 = new Person("Ahilya",50,"Female")
+
+        console.log("User 1:-\n"+user1)
+        console.log("User 2:-\n"+user2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Circle
+        {
+            constructor(radius,color) 
+            {
+                if(radius==undefined)
+                    this.radius = 1.0
+                else 
+                    this.radius = radius
+
+                if(color==undefined)
+                    this.color = "red" 
+                else
+                    this.color  = color
+            }
+
+            getRadius()
+            {
+                return (this.radius)
+            }
+
+            setRadius(radius)
+            {
+                this.radius = radius
+            }
+
+            getColor()
+            {
+                return (this.color)
+            }
+
+            setColor(color)
+            {
+                this.color  = color
+            }
+
+            toString() 
+            {
+                return "radius: "+(this.radius)+"\n"+"color: "+(this.color);
+            }
+
+            getArea()
+            {
+                return Math.PI*(this.radius)*(this.radius);
+            }
+
+            getCircumference()
+            {
+                return 2.0*Math.PI*(this.radius);
+            }
+        }
+
+        var c1 = new Circle()
+        var c2 = new Circle(10.2)
+        var c3 = new Circle(2.5,"blue")
+
+        console.log("Circle 1:-\n"+c1)
+        console.log("Circle 2:-\n"+c2)
+        console.log("Circle 3:-\n"+c3)
+    </script>
+</body>
+</html>
